@@ -9,15 +9,12 @@ import {MdSnackBar} from '@angular/material';
 })
 export class LoginComponent implements OnInit {
   returnUrl:String;
-  error:boolean;
 
-  constructor(private activeRoute: ActivatedRoute, private router: Router) { }
+  constructor(private activeRoute: ActivatedRoute, private router: Router, private snackBar: MdSnackBar) { }
  
     ngOnInit() {
         // reset login status
         localStorage.removeItem('user');
-
-        this.error = false;
  
         // get return url from route parameters or default to '/'
         this.returnUrl = this.activeRoute.snapshot.queryParams['returnUrl'] || '/';
@@ -28,7 +25,9 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('user', 'user');
         this.router.navigate([this.returnUrl]);
       }else{
-        this.error = true;
+        this.snackBar.open("Login failed!","close", {
+          duration: 3000,
+        });
       }
     }
 
