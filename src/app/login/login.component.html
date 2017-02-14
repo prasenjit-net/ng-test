@@ -1,0 +1,11 @@
+<md-card>
+  <md-card-content>
+  <md-input-container>
+    <input md-input placeholder="User name" value="user" #uname>
+  </md-input-container>
+  <md-input-container>
+    <input md-input placeholder="Password" value="pass" #pass>
+  </md-input-container>
+  <button md-raised-button (click)="login(uname.value, pass.value)" color="primary">Login</button>
+  </md-card-content>
+</md-card>
