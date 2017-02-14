@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { LoginComponent } from './login/login.component';
 
 import 'hammerjs';
+import { PersonListComponent } from './person-list/person-list.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import 'hammerjs';
     HomeComponent,
     AboutComponent,
     PageNotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    PersonListComponent
   ],
   imports: [
     BrowserModule,

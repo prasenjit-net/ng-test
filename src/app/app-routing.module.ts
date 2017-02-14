@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PersonListComponent } from './person-list/person-list.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,15 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path:'persons',
+    children: [
+      {
+        path: '',
+        component: PersonListComponent
+      }
+    ]
   },
   {
     path: '',

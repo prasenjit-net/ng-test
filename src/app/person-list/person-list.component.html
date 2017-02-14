@@ -1,0 +1,15 @@
+<md-grid-list cols="2">
+  <md-grid-tile>
+    <md-list>
+      <h3 md-subheader>Persons</h3>
+      <md-list-item *ngFor="let person of persons">
+        <md-icon md-list-avatar>perm_identity</md-icon>
+        <h4 md-line>Id: {{person.id}}</h4>
+        <p md-line> {{person.name | uppercase}} </p>
+      </md-list-item>
+    </md-list>
+  </md-grid-tile>
+  <md-grid-tile>
+
+  </md-grid-tile>
+</md-grid-list>
